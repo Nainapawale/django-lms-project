@@ -63,7 +63,8 @@
                     </div>
 
                     <div class="ms-auto">
-                        <a class="text-gray-800" href="recover.html">Forgot Password</a>recover
+                        <a class="text-gray-800" href="{% url 'password_reset' %}">Forgot Password</a>
+                        {% csrf_token %}
                     </div>
                 </div>
 
