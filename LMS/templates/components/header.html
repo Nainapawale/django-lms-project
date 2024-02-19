@@ -82,25 +82,29 @@
             <!-- Navigation -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown dropdown-full-width ">
-                    <a class="nav-link px-xl-4 text-gigas" href="">
+                    <a class="nav-link px-xl-4 text-gigas" href="{% url 'home' %}">
+                        {% csrf_token %}
                         <span>Home</span>
                     </a>
 
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a class="nav-link text-gigas" href="">
+                    <a class="nav-link text-gigas" href="{% url 'about_us' %}">
+                        {% csrf_token %}
                         About
                     </a>
 
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a class="nav-link text-gigas" href="">
+                    <a class="nav-link text-gigas" href="{% url 'contact_us' %}">
+                        {% csrf_token %}
                         Contact Us
                     </a>
 
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
                     <a class="nav-link text-gigas" href="">
+                        {% csrf_token %}
                         My Courses
                     </a>
 
@@ -114,7 +118,8 @@
 
                     <ul class="dropdown-menu border-xl shadow-none" aria-labelledby="user">
                         <li class="dropdown-item">
-                            <a class="dropdown-link active" href="">
+                            <a class="dropdown-link active" href="{% url 'profile' %}">
+                                {% csrf_token %}
                                 Account
                             </a>
                         </li>
@@ -139,7 +144,8 @@
 
                     <ul class="dropdown-menu border-xl shadow-none" aria-labelledby="user">
                         <li class="dropdown-item">
-                            <a class="dropdown-link " href="">
+                            <a class="dropdown-link " href="{% url 'profile' %}">
+                                {% csrf_token %}
                                 Account
                             </a>
                         </li>
@@ -159,7 +165,8 @@
                 {% else %}
                 <li class="nav-item border-0 px-1 px-md-3 mt-3">
                     <!-- Button trigger account modal -->
-                    <a href="#" class="nav-link d-flex p-3 bg-white-all rounded-circle text-gigas icon-xs"
+                    <a href="{% url 'doLogin' %}"
+                        class="nav-link d-flex p-3 bg-white-all rounded-circle text-gigas icon-xs"
                         data-bs-toggle="modal" data-bs-target="#accountModal">
                         <!-- Icon -->
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,6 +176,7 @@
                         </svg>
 
                     </a>
+                    {% csrf_token %}
                 </li>
                 {% endif %}
             </ul>

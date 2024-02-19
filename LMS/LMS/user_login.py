@@ -50,5 +50,6 @@ def Do_LOGIN(request):
             messages.error(request, 'Email and Password Are Invalid !')
             return redirect('login')
     
-
+def PROFILE(request):
+    return render(request,'registration/profile.html')
     return None
