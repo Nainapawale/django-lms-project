@@ -24,10 +24,13 @@
     <img class="d-none img-fluid" src="...html" alt="...">
 </header>
 <!-- Card -->
+{% include 'components/msg.html' %}
+
 <div class="card" style="width:80%;margin-left:10%;">
     <div class="card-body">
 
-        <form>
+        <form method="post" action="{% url 'profile_update' %}">
+            {% csrf_token %}
 
             <div class="row">
                 <div class="col">
@@ -49,14 +52,14 @@
                     <div class="form-group mb-4">
                         <label>Email address</label>
                         <input type="email" class="form-control" placeholder="Enter Email" name="email"
-                            value="{{user.email}}">
+                            value="{{user.email}}" readonly>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group mb-4">
                         <label>Username</label>
                         <input type="text" class="form-control" placeholder="Enter Username" name="username"
-                            value="{{user.username}}">
+                            value="{{user.username}}" readonly>
                     </div>
                 </div>
                 <div class="col-12">

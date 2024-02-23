@@ -32,10 +32,12 @@
     <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
 
     <!-- Map -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
     <title>Edu</title>
 
@@ -43,10 +45,10 @@
 
 <body>
 
-{% include 'components/modals.html' %}
-{% include 'components/header.html' %}
-{% block content %}{% endblock %}
-   {% include 'components/footer.html' %}
+    {% include 'components/modals.html' %}
+    {% include 'components/header.html' %}
+    {% block content %}{% endblock %}
+    {% include 'components/footer.html' %}
     <!-- JAVASCRIPT
     ================================================== -->
     <!-- Libs JS -->
